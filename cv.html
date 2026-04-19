@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gitau Elvis Munene - CV</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    color: #1a1a2e;
+    line-height: 1.5;
+    font-size: 10.5pt;
+    background: #fff;
+  }
+
+  .page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 48px;
+  }
+
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 3px solid #0a192f;
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+  }
+
+  .header-left h1 {
+    font-size: 24pt;
+    font-weight: 800;
+    color: #0a192f;
+    letter-spacing: -0.5px;
+  }
+
+  .header-left .title {
+    font-size: 12pt;
+    color: #0f7b6c;
+    font-weight: 600;
+    margin-top: 2px;
+  }
+
+  .header-right {
+    text-align: right;
+    font-size: 9pt;
+    color: #444;
+    line-height: 1.8;
+  }
+
+  .header-right a {
+    color: #0f7b6c;
+    text-decoration: none;
+  }
+
+  .header-right i {
+    width: 14px;
+    text-align: center;
+    margin-right: 4px;
+    color: #0a192f;
+  }
+
+  /* Section */
+  .section {
+    margin-bottom: 16px;
+  }
+
+  .section-title {
+    font-size: 11pt;
+    font-weight: 700;
+    color: #0a192f;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-bottom: 1.5px solid #d0d7e3;
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+  }
+
+  /* Summary */
+  .summary {
+    font-size: 10pt;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  /* Experience */
+  .job {
+    margin-bottom: 14px;
+  }
+
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .job-title {
+    font-weight: 700;
+    font-size: 10.5pt;
+    color: #0a192f;
+  }
+
+  .job-date {
+    font-size: 9pt;
+    color: #666;
+    white-space: nowrap;
+  }
+
+  .job-company {
+    font-size: 9.5pt;
+    color: #0f7b6c;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+
+  .job ul {
+    padding-left: 18px;
+    margin-top: 4px;
+  }
+
+  .job li {
+    font-size: 9.5pt;
+    color: #333;
+    margin-bottom: 2px;
+    line-height: 1.5;
+  }
+
+  /* Skills */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 32px;
+  }
+
+  .skill-row {
+    display: flex;
+    gap: 8px;
+    font-size: 9.5pt;
+  }
+
+  .skill-label {
+    font-weight: 600;
+    color: #0a192f;
+    min-width: 140px;
+  }
+
+  .skill-value {
+    color: #444;
+  }
+
+  /* Education & Certs */
+  .edu-item, .cert-item {
+    margin-bottom: 8px;
+  }
+
+  .edu-item h3, .cert-item h3 {
+    font-size: 10pt;
+    font-weight: 600;
+    color: #0a192f;
+  }
+
+  .edu-item .school, .cert-item .issuer {
+    font-size: 9pt;
+    color: #0f7b6c;
+  }
+
+  .edu-item .date {
+    font-size: 9pt;
+    color: #666;
+  }
+
+  /* Projects */
+  .project {
+    margin-bottom: 8px;
+  }
+
+  .project h3 {
+    font-size: 10pt;
+    font-weight: 600;
+    color: #0a192f;
+    display: inline;
+  }
+
+  .project .award {
+    color: #d4a017;
+    font-weight: 600;
+    font-size: 9pt;
+  }
+
+  .project p {
+    font-size: 9pt;
+    color: #444;
+    margin-top: 1px;
+  }
+
+  /* Two column layout for bottom sections */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 32px;
+  }
+
+  /* Print */
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .page { padding: 24px 36px; }
+    .no-print { display: none; }
+    @page { margin: 0.4in; size: A4; }
+  }
+
+  .print-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #0a192f;
+    color: #64ffda;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  .print-btn:hover { background: #112240; }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<button class="print-btn no-print" onclick="window.print()"><i class="fas fa-download"></i> Save as PDF</button>
+
+<div class="page">
+  <div class="header">
+    <div class="header-left">
+      <h1>Gitau Elvis Munene</h1>
+      <div class="title">DevOps & SRE Engineer</div>
+    </div>
+    <div class="header-right">
+      <div><i class="fas fa-map-marker-alt"></i>Nairobi, Kenya</div>
+      <div><i class="fas fa-envelope"></i><a href="mailto:gitauelvis@gmail.com">gitauelvis@gmail.com</a></div>
+      <div><i class="fas fa-phone"></i><a href="tel:+254790139279">+254 790 139 279</a></div>
+      <div><i class="fab fa-linkedin"></i><a href="https://linkedin.com/in/elvis-m-695417188">linkedin.com/in/elvis-m-695417188</a></div>
+      <div><i class="fab fa-github"></i><a href="https://github.com/GitauElvisMunene">github.com/GitauElvisMunene</a></div>
+    </div>
+  </div>
+
+  <!-- Summary -->
+  <div class="section">
+    <div class="section-title">Professional Summary</div>
+    <p class="summary">
+      DevOps & SRE Engineer with 3+ years of experience building scalable cloud infrastructure and automating deployment pipelines. Specialized in AWS cloud architecture, Kubernetes orchestration, CI/CD automation, and Infrastructure as Code. Currently supporting healthcare innovation at Tiberbu Healthnet by bridging development and operations. Hackathon champion, AWS certified, and passionate mentor who has trained 500+ students in technology.
+    </p>
+  </div>
+
+  <!-- Experience -->
+  <div class="section">
+    <div class="section-title">Work Experience</div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-title">DevOps Support Engineer</span>
+        <span class="job-date">July 2025 &mdash; Present</span>
+      </div>
+      <div class="job-company">Tiberbu Healthnet Limited</div>
+      <ul>
+        <li>Bridge development and operations, streamlining deployments and ensuring rapid, reliable product iterations for healthcare platforms.</li>
+        <li>Design and maintain CI/CD pipelines using GitHub Actions and ArgoCD, enabling automated testing, security scanning, and zero-downtime deployments.</li>
+        <li>Manage and optimize AWS cloud infrastructure (ECS, EC2, RDS, S3, CloudFront) ensuring high availability for critical healthcare applications.</li>
+        <li>Implement Infrastructure as Code with Terraform, automating provisioning of multi-environment setups (dev, staging, production).</li>
+        <li>Containerize applications with Docker and orchestrate workloads on Kubernetes, improving resource utilization and deployment consistency.</li>
+        <li>Set up monitoring and alerting using Prometheus, Grafana, and CloudWatch for proactive incident response.</li>
+        <li>Manage API lifecycle and traffic routing with Apache APISIX for secure, performant API delivery.</li>
+        <li>Engineer Health Data Lake pipelines leveraging FHIR data standards for clinical data visualization.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-title">IoT STEAM Associate</span>
+        <span class="job-date">Feb 2022 &mdash; June 2025</span>
+      </div>
+      <div class="job-company">Angaza &mdash; Elimu Holdings</div>
+      <ul>
+        <li>Designed and developed custom IoT development kits and comprehensive training content for real-world projects.</li>
+        <li>Built full-stack IoT applications with intuitive interfaces across web and embedded platforms.</li>
+        <li>Led training programs in IoT and software engineering, empowering 500+ students with hands-on skills.</li>
+        <li>Managed PaaS platforms and cloud services, building foundational cloud infrastructure experience.</li>
+        <li>Drove digital marketing through video content that grew the IoT School user base significantly.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-title">Lead, Cloud Department</span>
+        <span class="job-date">2022 &mdash; 2023</span>
+      </div>
+      <div class="job-company">KEKA Precision Technologies</div>
+      <ul>
+        <li>Managed Platform-as-a-Service (PaaS) platforms, overseeing deployment and maintenance of cloud-hosted applications.</li>
+        <li>Participated in designing VMware virtualization solutions for enterprise clients.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Skills -->
+  <div class="section">
+    <div class="section-title">Technical Skills</div>
+    <div class="skills-grid">
+      <div class="skill-row"><span class="skill-label">Cloud Platforms:</span><span class="skill-value">AWS (EC2, ECS, EKS, Lambda, S3, RDS, CloudFront, IAM, VPC)</span></div>
+      <div class="skill-row"><span class="skill-label">Containers & Orchestration:</span><span class="skill-value">Docker, Kubernetes, Helm, ECS</span></div>
+      <div class="skill-row"><span class="skill-label">CI/CD & GitOps:</span><span class="skill-value">GitHub Actions, ArgoCD, Jenkins</span></div>
+      <div class="skill-row"><span class="skill-label">Infrastructure as Code:</span><span class="skill-value">Terraform, CloudFormation</span></div>
+      <div class="skill-row"><span class="skill-label">Monitoring:</span><span class="skill-value">Prometheus, Grafana, ELK, CloudWatch</span></div>
+      <div class="skill-row"><span class="skill-label">Languages & Scripting:</span><span class="skill-value">Python, Bash, Go, JavaScript</span></div>
+      <div class="skill-row"><span class="skill-label">Databases:</span><span class="skill-value">PostgreSQL, MySQL, Redis, DynamoDB</span></div>
+      <div class="skill-row"><span class="skill-label">API & Networking:</span><span class="skill-value">Apache APISIX, API Gateway, DNS, Load Balancing</span></div>
+      <div class="skill-row"><span class="skill-label">Security:</span><span class="skill-value">DevSecOps, Vault, IAM, Compliance</span></div>
+      <div class="skill-row"><span class="skill-label">OS & Platforms:</span><span class="skill-value">Linux, VMware, Networking</span></div>
+    </div>
+  </div>
+
+  <div class="two-col">
+    <div>
+      <!-- Education -->
+      <div class="section">
+        <div class="section-title">Education</div>
+        <div class="edu-item">
+          <h3>B.Sc. Statistics & Programming</h3>
+          <div class="school">Kenyatta University, Nairobi</div>
+          <div class="date">2017 &mdash; 2022</div>
+        </div>
+        <div class="edu-item">
+          <h3>Software Engineering Certificate</h3>
+          <div class="school">Moringa School</div>
+        </div>
+        <div class="edu-item">
+          <h3>Data Science with Python</h3>
+          <div class="school">National Research Fund</div>
+        </div>
+      </div>
+
+      <!-- Certifications -->
+      <div class="section">
+        <div class="section-title">Certifications</div>
+        <div class="cert-item">
+          <h3>AWS Certified Solutions Architect</h3>
+          <div class="issuer">Amazon Web Services</div>
+        </div>
+        <div class="cert-item">
+          <h3>AWS Certified Cloud Practitioner</h3>
+          <div class="issuer">Amazon Web Services</div>
+        </div>
+        <div class="cert-item">
+          <h3>Software Engineering</h3>
+          <div class="issuer">Moringa School</div>
+        </div>
+        <div class="cert-item">
+          <h3>Data Science with Python</h3>
+          <div class="issuer">National Research Fund</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <!-- Projects -->
+      <div class="section">
+        <div class="section-title">Notable Projects</div>
+        <div class="project">
+          <h3>Healthcare Appointment Scheduling</h3>
+          <p>Full-stack system with React, FastAPI, PostgreSQL, Docker. Role-based access, JWT auth, real-time scheduling.</p>
+        </div>
+        <div class="project">
+          <h3>SmartFarm (e-Shamba)</h3> <span class="award">&mdash; 1st Place, Innovate Nairobi Tech Week</span>
+          <p>Smart farming solution enabling remote farm monitoring with IoT and data-driven agricultural decisions.</p>
+        </div>
+        <div class="project">
+          <h3>Pyrowatch</h3> <span class="award">&mdash; 1st Place, Microsoft Hack4Climate</span>
+          <p>Automated fire-fighting solution with IoT sensors for early detection and suppression.</p>
+        </div>
+        <div class="project">
+          <h3>Smart Water Meter (IoT)</h3>
+          <p>Real-time leakage detection and consumption monitoring system reducing water loss and operational costs.</p>
+        </div>
+      </div>
+
+      <!-- Community -->
+      <div class="section">
+        <div class="section-title">Community & Impact</div>
+        <div class="project">
+          <h3>Hackathon Champion</h3>
+          <p>2x winner: Innovate Nairobi Tech Week & Microsoft Hack4Climate.</p>
+        </div>
+        <div class="project">
+          <h3>STEM Educator & Mentor</h3>
+          <p>Trained 500+ students at Angaza in IoT, software engineering, and cloud technologies.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

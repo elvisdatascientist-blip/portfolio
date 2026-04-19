@@ -1,0 +1,6 @@
+node_modules/
+wuee-original.png
+.vercel/
+package.json
+package-lock.json
+generate-cv.js
